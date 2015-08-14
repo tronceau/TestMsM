@@ -8,11 +8,13 @@ using System.Web.Http;
 namespace MsM.API.Controllers
 {
     [RoutePrefix("api/Langue")]
+
     public class LangueController : ApiController
     {
         [AllowAnonymous]
         [Route("")]
         // GET api/Langue
+        /// Retourne la liste des langues gérer par le système.
         public IHttpActionResult Get()
         {
             // Pour les tests on retourne des valeurs en dur....
