@@ -15,20 +15,27 @@
     <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body>
-    <!--<div data-ng-view=""></div>-->
     <div id="page">
-        <header class="container" data-ng-controller="navigationController">
-            <div id="menu" class="navbar navbar-default">
+        <header class="container">
+            <div id="menu" class="navbar navbar-default" data-ng-controller="navigationController">
                 <div class="navbar-header">
                     <button class="btn btn-success navbar-toggle" data-ng-init="navbarExpanded = true" data-ng-click="navbarExpanded = !navbarExpanded">
                         <span class="glyphicon glyphicon-chevron-down"></span>
                     </button>
                     <div id="logo">
                         <a href='#/'>
-                            <!--<img src="content/image/logosite.png" />-->
                             <h4>MsM</h4>
                         </a>
                     </div>
+                    <div id="langue"  data-ng-controller='langueController'>
+                        <button data-ng-click='doFrancais()' class="btn btn-success">
+                            Francais
+                        </button>
+                        <button data-ng-click="doAnglais()">
+                            <img src="content/image/gbr.gif" width="20px" />
+                        </button>
+                    </div>
+
                 </div>
                 <div class="navbar-collapse collapse" data-collapse="!navbarExpanded">
                     <ul class="nav navbar-nav navbar-right">
@@ -41,7 +48,7 @@
         </header>
 
         <section class="container" id="body" style="height:200px">
-            <div data-ng-view="" ></div>
+            <div data-ng-view=""></div>
         </section>
         <hr />
         <footer class="container">
@@ -57,6 +64,7 @@
     <script src="scripts/angular-route.min.js"></script>
     <script src="scripts/angular-resource.min.js"></script>
     <script src="scripts/angular-animate.min.js"></script>
+    <script src="scripts/angular-local-storage.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.3/ui-bootstrap-tpls.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.3/ui-bootstrap-tpls.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.3/ui-bootstrap.js"></script>
@@ -68,24 +76,19 @@
     <!-- Load app main script -->
     <script src="app.js"></script>
 
-     Load services 
+    <!--Load services-->
     <script src="app/services/getLangueService.js"></script>
-    <script src="app/services/placesPhotosService.js"></script>
-    <script src="app/services/placesDataService.js"></script>
-
+    <script src="app/services/authService.js"></script>
+    <!--<script src="app/services/placesPhotosService.js"></script>
+    <script src="app/services/placesDataService.js"></script>-->
     <!-- Load controllers -->
     <script src="app/controllers/homeController.js"></script>
     <script src="app/controllers/navigationController.js"></script>
-    <!--<script src="app/controllers/placesPhotosController.js"></script>
-    <script src="app/controllers/placesExplorerController.js"></script>
-    <script src="app/controllers/userContextController.js"></script>
-    <script src="app/controllers/myPlacesController.js"></script>
-    <script src="app/controllers/navigationController.js"></script>
-    <script src="app/controllers/aboutController.js"></script>-->
-
+    <script src="app/controllers/langueController.js"></script>
+    <script src="app/controllers/loginController.js"></script>
+    <script src="app/controllers/signeupController.js"></script>
     <!-- Load custom filters -->
     <!--<script src="app/filters/placeNameCategoryFilter.js"></script>-->
-
     <!-- Load custom directives -->
     <!--<script src="app/directives/fsUnique.js"></script>-->
 </body>

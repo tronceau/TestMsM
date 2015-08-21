@@ -1,15 +1,20 @@
-﻿<div >
-    <!--<label>TEST</label>--> 
-    <!--<input type="text" data-ng-model="Jour"/>-->
-    <div>
-        <button class="bg-primary">Se connecter</button>
-    </div>
-    <div>
-        <h2></h2>
-        <button class="bg-primary">S'inscrire</button>
-    </div>
-    <div>
-        <h2></h2>
-        <button class="bg-primary">Visiteur simple</button>
-    </div>
+﻿
+<div class="col-md-4">
+    <h2>{{msgConnexion}}</h2>
+    <p class="text-primary">Compte déjà créé ? </p>
+    <p><a class="btn btn-info" href="#/login" role="button">{{msgConnexion}}</a></p>
 </div>
+    <div class="col-md-4">
+        <h2>{{msgInscription}}</h2>
+        <p class="text-primary">Creation d'un compte</p>
+        <p><a class="btn btn-info" href="#/signup" role="button">{{msgInscription}}</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>{{msgVisiteur}}</h2>
+        <p class="text-primary">Visiteur</p>
+        <p><a class="btn btn-info" href="#/signup" role="button">{{msgVisiteur}}</a></p>
+    </div>
+<div class="col-md-2">
+    &nbsp;
+</div>
+
